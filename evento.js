@@ -1,15 +1,12 @@
 //script de evento.html
 var map;
 
+window.onload = function() {
+	
+    document.myform.action = get_action();
+}
+
 function initialize() {
-	// map =  new google.maps.Map(document.getElementById("map"), {
-	// 	center: new google.maps.LatLng(25.651313, -100.289604),
-	// 	zoom: 16,
-	// 	mapTypeId: google.maps.MapTypeId.ROADMAP
-	// });
-	// map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-
 	map = new google.maps.Map(document.getElementById('map'), {
 	  zoom: 16,
 	  center: new google.maps.LatLng(25.651313, -100.289604),
@@ -78,3 +75,8 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
+
+function addComment(){
+
+
+}
