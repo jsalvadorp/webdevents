@@ -2,13 +2,20 @@
 var map;
 
 function initialize() {
-	map =  new google.maps.Map(document.getElementById("googleMap"), {
-		center: new google.maps.LatLng(25.651313, -100.289604),
-		zoom: 16,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
+	// map =  new google.maps.Map(document.getElementById("map"), {
+	// 	center: new google.maps.LatLng(25.651313, -100.289604),
+	// 	zoom: 16,
+	// 	mapTypeId: google.maps.MapTypeId.ROADMAP
+	// });
+	// map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+	map = new google.maps.Map(document.getElementById('map'), {
+	  zoom: 16,
+	  center: new google.maps.LatLng(25.651313, -100.289604),
+	  mapTypeId: google.maps.MapTypeId.ROADMAP,
 	});
 	
-	//map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
 
 	var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
