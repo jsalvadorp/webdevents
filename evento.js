@@ -1,10 +1,6 @@
 //script de evento.html
 var map;
 
-window.onload = function() {
-	
-    document.myform.action = get_action();
-}
 
 function initialize() {
 	map = new google.maps.Map(document.getElementById('map'), {
