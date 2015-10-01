@@ -7,10 +7,10 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/lightbox.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script type="text/javascript" src="js/materialize.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3"></script>
-	<script type="text/javascript" src="evento.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	
 	<style>
 	
@@ -21,21 +21,20 @@
 		#socialMedia{
 			text-align: center;
 		}
-     	#legend {
-        font-family: Arial, sans-serif;
-        background: #fff;
-        padding: 10px;
-        margin: 10px;
-        border: 3px solid #000;
-      }
-      #legend h3 {
-        margin-top: 0;
-      }
-      #legend img {
-        vertical-align: middle;
-      }
 
 	</style>
+	
+	<script>
+		function initialize() {
+		  var mapProp = {
+		    center:new google.maps.LatLng(51.508742,-0.120850),
+		    zoom:5,
+		    mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 	
 	<title>Expotec</title>
 
@@ -67,16 +66,15 @@
 		<div class="row">
 		    <div class="col s5">
 		    	<img src="img/Expotec2015.jpg" style="vertical-align:middle;" />
-		    	<div id="map" style="width:500px;height:380px;"></div>
-		    	<div id="legend"><h3>Leyenda</h3></div>
+		    	<div id="googleMap" style="width:500px;height:380px;"></div>
 		    	<form>
 				    <p>
 				      <input name="group1" type="radio" id="test1" />
-				      <label for="test1">Asistir&eacute;</label>
+				      <label for="test1">Asistire</label>
 				      <input name="group1" type="radio" id="test2" />
-				      <label for="test2">No Asistir&eacute;</label>
+				      <label for="test2">No Asistire</label>
 				      <input class="with-gap" name="group1" type="radio" id="test3"  />
-				      <label for="test3">Tal vez Asistir&eacute;</label>
+				      <label for="test3">Talvez Asistire</label>
 				    </p>
 			  	</form>
 			 	<table class="striped" width="500px">
@@ -90,25 +88,35 @@
 			    	<tbody>
 			    		<tr>
 			    			<td>Alvin</td>
-			    			<td>Asistir&aacute;</td>
+			    			<td>Asistira</td>
 			    		</tr>
 			    		<tr>
 			    			<td>Alan</td>
-			    			<td>No Asistir&aacute;</td>
+			    			<td>No Asistira</td>
 			    		</tr>
 			    		<tr>
 			    			<td>Jonathan</td>
-			    			<td>Talvez Asistir&aacute;</td>
+			    			<td>Talvez Asistira</td>
 			    		</tr>
 			    	</tbody>
 			    </table>
 			    <div class="card">
 			    	<div class="card-image">
-			    		<img src="img/imgEvento.jpg">
+			    	
+						
+						<div class="image-set">
+              <a  href="img/imgEvento.jpg" data-lightbox="example-set" ><img class="example-image" src="img/imgEvento.jpg"></a>
+              <a  href="img/imgEvento2.jpg" data-lightbox="example-set"></a>
+              <a  href="img/imgEvento3.jpg" data-lightbox="example-set" ></a>
+              <a  href="img/barneyParty.jpg" data-lightbox="example-set"></a>
+            </div>
+			
+			
+			
 			    		<span class="card-title">Gente Feliz</span>
 			    	</div>
 		    		<div class="card-action">
-		    			<a href="#">Ver Im&aacute;genes del evento</a>
+		    			<a href="#">Ver Imagenes del evento</a>
 		    		</div>
 			    </div>
 		    </div>
@@ -173,6 +181,8 @@
 		  	<img src="img/googleLogo.jpg" style="vertical-align:middle;" />
 	  	</div>
 	</div>
+	
+	<script src="js/lightbox.js"></script>
 </body>
 
 </html>
