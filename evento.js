@@ -9,7 +9,7 @@ function initialize() {
 	  center: new google.maps.LatLng(25.651313, -100.289604),
 	  mapTypeId: google.maps.MapTypeId.ROADMAP,
 	});
-	
+
 
 
 	var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
@@ -125,4 +125,12 @@ function addComment(){
 }
 
 
+$(document).ready(function() {
 
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+				lang: 'es'
+    })
+
+});
