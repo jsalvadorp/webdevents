@@ -1,6 +1,7 @@
 //script de evento.html
 var map;
 
+var didYouComment = false;
 
 function initialize() {
 	map = new google.maps.Map(document.getElementById('map'), {
@@ -71,8 +72,57 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
-
-function addComment(){
-
+window.onload = function(){
+	document.getElementById("commentButton").onclick = addComment;
 
 }
+
+
+function addComment(){
+	var comment = document.getElementById("textarea1").value;
+
+	if (comment.length < 5 || didYouComment){
+		return false;
+	}
+
+	var parent = document.getElementById("comentarios");
+	var appendTo = document.createElement("div");
+
+	var node1 = document.createElement("div");
+	node1.setAttribute("class", "col s1");
+	node1.appendChild(document.createElement("p"));
+
+	var childNode1 = document.createElement("i");
+	childNode1.setAttribute("class", "material-icons");
+	childNode1.innerHTML = "play_arrow";
+	node1.firstChild.appendChild(childNode1);
+
+
+	appendTo.appendChild(node1);
+
+	var node2 = document.createElement("div");
+	node2.setAttribute("class", "col s2");
+	node2.appendChild(document.createElement("p"));
+
+	node2.firstChild.innerHTML = "Jorge";
+
+	appendTo.appendChild(node2);
+
+	var node3 = document.createElement("div");
+	node3.setAttribute("class", "col s9");
+	node3.appendChild(document.createElement("p"));
+	node3.firstChild.innerHTML = comment;
+
+	appendTo.appendChild(node3);
+
+
+	parent.appendChild(appendTo);
+
+	didYouComment = true;
+
+	document.getElementById("commentButton").setAttribute("class", "btn waves-effect waves-light blue darken-4 disabled");
+	return;
+}
+
+
+

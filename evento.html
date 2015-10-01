@@ -140,7 +140,7 @@
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 				</p>
 				<h5>Comentarios:</h5>
-				<div class="row">
+				<div id="comentarios" class="row">
 					<div class="col s1">
 						<p>
 							<i class="material-icons">play_arrow</i>
@@ -171,16 +171,31 @@
 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 						</p>
 					</div>
+					<div class="col s1">
+						<p>
+							<i class="material-icons">play_arrow</i>
+						</p>
+					</div>
+					<div class="col s2">
+						<p>
+							Maria
+						</p>
+					</div>
+					<div class="col s9">
+						<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p>
+					</div>
 				</div>
 				<div class="row">
-					<form action=class="col s12">
+					<form  action="javascript:void(0);" class="col s12">
 						<div class="row">
 							<div class="input-field col s12">
 								<textarea id="textarea1" class="materialize-textarea" length="120"></textarea>
 								<label for="textarea1">Comentario:</label>
 							</div>
 						</div>
-						<button class="btn waves-effect waves-light blue darken-4" type="submit" name="action">
+						<button id="commentButton" class="btn waves-effect waves-light blue darken-4">
 				    		Enviar<i class="material-icons right">send</i>
 						</button>
 					</form>
