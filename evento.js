@@ -1,7 +1,7 @@
 //script de evento.html
 var map;
 
-var didYouComment = false;
+// var didYouComment = false;
 
 function initialize() {
 	map = new google.maps.Map(document.getElementById('map'), {
@@ -79,9 +79,37 @@ window.onload = function(){
 
 
 function addComment(){
+
+
+	var name, msg;
+
+	// msg = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+	
+
+
+
+	name = "Jorge";
+
+	// msg = $("#textarea1").val();
+
+	msg = $("#textarea1").val();
+
+	// alert($("#textarea1").val());
+
+	var text;
+
+	text = '<div class="row"><div class="col s1"><p><i class="material-icons">play_arrow</i></p></div><div class="col s2"><p>Jorge</p></div><div class="col s9"><p>'+msg+'</p></div></div>';
+
+
+	$("#comentarios").append(text);
+
+
+	$("#textarea1").val('');
+
+	/*
 	var comment = document.getElementById("textarea1").value;
 
-	if (comment.length < 5 || didYouComment){
+	if (comment.length < 5 ){
 		return false;
 	}
 
@@ -118,9 +146,11 @@ function addComment(){
 
 	parent.appendChild(appendTo);
 
-	didYouComment = true;
+	*/
 
-	document.getElementById("commentButton").setAttribute("class", "btn waves-effect waves-light blue darken-4 disabled");
+	// didYouComment = true;
+
+	// document.getElementById("commentButton").setAttribute("class", "btn waves-effect waves-light blue darken-4 enabled");
 	return;
 }
 
